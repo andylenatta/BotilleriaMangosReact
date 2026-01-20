@@ -1,0 +1,67 @@
+/* reset.css */
+
+/* Box sizing consistente */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Elimina márgenes por defecto */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Altura base */
+html,
+body,
+#root {
+  height: 100%;
+}
+
+/* Tipografía base */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Inter', sans-serif;
+  background-color: #ffffff;
+  color: #212121;
+}
+
+/* Medios responsivos */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* Formularios heredan tipografía */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Elimina estilos por defecto en botones */
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Links limpios */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Listas limpias */
+ul,
+ol {
+  list-style: none;
+}
