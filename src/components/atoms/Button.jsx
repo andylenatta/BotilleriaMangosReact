@@ -1,20 +1,49 @@
 import { color, tipografia, spacing } from "../protons"
 
-function Button({ children, type="button" , ...props }) {
+const variants = {
+  primary: {
+    backgroundColor: color.ui.primary,
+    color: color.neutral.white,
+  },
+  secondary: {
+    backgroundColor: color.ui.secondary,
+    color: color.neutral.dark,
+  },
+};
+
+const sizes = {
+  sm: {
+    padding: spacing.sm,
+  },
+  md: {
+    padding: spacing.md,
+  },
+};
+
+function Button({
+  children,
+  type = "button",
+  variant = "primary",
+  size = "md",
+  onClick,
+  disabled = false,
+}) {
   return (
     <button
-      {...props}
+      type={type}
+      onClick={onClick}
+      disabled={disabled}
       style={{
-        backgroundColor: color.ui.primary,
-        color: color.neutral.white,
+        ...variants[variant],
+        ...sizes[size],
         fontFamily: tipografia.fontFamily.base,
-        padding: spacing.md,
-        ...props.style
+        opacity: disabled ? 0.6 : 1,
+        cursor: disabled ? "not-allowed" : "pointer",
       }}
     >
       {children}
     </button>
-  )
+  );
 }
 
 export default Button

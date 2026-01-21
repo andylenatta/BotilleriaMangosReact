@@ -6,6 +6,7 @@ export const color = {
 
   ui: {
     primary: '#2E7D32',
+    secondary: '#F4A300',
     danger: '#C62828',
     warning: '#F9A825',
     success: '#0c7811',

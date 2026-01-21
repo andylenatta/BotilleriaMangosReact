@@ -3,19 +3,15 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
-import Button from './components/atoms/Button'
-import Text from './components/atoms/Text'
+import NavItem from './components/molecules/NavItem'
 
 function App() {
-  const [count, setCount] = useState(0)
-  const [count2, setCount2] = useState(0)
 
   return (
     <>
 
-    <Button>Hola este es un boton de prueba</Button>
-
-
+      <NavItem icon="mango"label="mango" active></NavItem>
+      
     </>
   )
 }
