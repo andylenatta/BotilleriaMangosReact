@@ -67,7 +67,7 @@ function Text({
   variant = "body",
   size = "md",
   weight = "regular",
-  color: colorProp = "primary",
+  color = "primary",
 }) {
   const Component = as;
 
@@ -77,7 +77,7 @@ function Text({
         ...variants[variant],
         ...sizes[size],
         ...weights[weight],
-        ...colors[colorProp],
+        ...colors[color],
       }}
     >
       {children}

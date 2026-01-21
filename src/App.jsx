@@ -3,17 +3,18 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
-import NavItem from './components/molecules/NavItem'
+import Navbar from '@/components/organisms/Navbar'
 
 function App() {
-
   return (
     <>
-
-      <NavItem icon="mango"label="mango" active></NavItem>
-      
+      <Navbar />
+      <main>
+        {/* contenido */}
+      </main>
     </>
   )
 }
+
 
 export default App

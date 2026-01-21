@@ -19,13 +19,14 @@ const NavItem = ({
                 padding: `${spacing.sm} ${spacing.md}`,
                 borderRadius: radius.md,
                 backgroundColor: active ? color.brand.mangoDark: "transparent",
+                textColor: {textColor}
             }}
         >
             <IconText
                 icon={icon}
                 textWeight={active ? 'bold' : 'regular'}
-                textColor={state === 'active' ? 'inverse' : 'secondary'}
-                iconColor={active ? 'brand.mango' : 'neutral.gray'}
+                textColor={state === active ? 'primary': 'inverse' }
+                iconColor={active ? 'brand.primary' : 'neutral.gray'}
             >
                 {label}
             </IconText>
