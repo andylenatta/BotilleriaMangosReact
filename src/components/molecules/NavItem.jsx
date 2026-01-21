@@ -25,7 +25,7 @@ const NavItem = ({
             <IconText
                 icon={icon}
                 textWeight={active ? 'bold' : 'regular'}
-                textColor={state === active ? 'primary': 'inverse' }
+                textColor={state === 'active' ? 'primary': 'inverse' }
                 iconColor={active ? 'brand.primary' : 'neutral.gray'}
             >
                 {label}

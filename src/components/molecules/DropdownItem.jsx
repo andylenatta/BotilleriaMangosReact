@@ -4,33 +4,30 @@ import { spacing, color, radius } from '../protons'
 const DropdownItem = ({
   children,
   href,
-  active = false,
+  onClick,
 }) => {
   return (
     <a
       href={href}
+      onClick={onClick}
       style={{
-        display: 'block',
-        padding: `${spacing.xs} ${spacing.sm}`,
-        borderRadius: radius.sm,
+        display: 'flex',
+        alignItems: 'center',
+        width: '100%',
+        padding: `${spacing.xs} ${spacing.xs}`,
+        borderRadius: radius.xs,
         textDecoration: 'none',
-        color: active
-          ? color.brand.mango
-          : color.neutral.primary,
-        backgroundColor: active
-          ? color.brand.mangoDark
-          : 'transparent',
+        color: color.ui.primary,
+        transition: 'background-color 120ms ease, color 120ms ease',
       }}
       onMouseEnter={(e) => {
-        e.currentTarget.style.backgroundColor = color.neutral.light
+        e.currentTarget.style.backgroundColor = color.neutral.white
       }}
       onMouseLeave={(e) => {
-        e.currentTarget.style.backgroundColor = active
-          ? color.brand.mangoLight
-          : 'transparent'
+        e.currentTarget.style.backgroundColor = 'transparent'
       }}
     >
-      <Text as="span" size="sm" color='primary'>
+      <Text as="span" size="sm">
         {children}
       </Text>
     </a>

@@ -23,9 +23,13 @@ const NavDropdown = ({ label, items = [] }) => {
   return (
     <div
       ref={ref}
-      style={{ position: 'relative' }}
+      style={{ 
+        position: 'relative',
+        display: 'inline-flex',
+        alignItems: 'center'
+       }}
       onMouseEnter={() => setOpen(true)}
-      onMouseLeave={() => setOpen(true)}
+      onMouseLeave={() => setOpen(false)}
     >
       <div onClick={() => setOpen((prev) => !prev)}>
         <IconText textColor="inverse">
