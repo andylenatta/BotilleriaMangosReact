@@ -7,7 +7,6 @@ const IconText = ({
   iconSize = 20,
   iconColor = 'neutral.dark',
   
-  // props que se pasan al Text
   textVariant = 'body',
   textSize = 'md',
   textWeight = 'regular',

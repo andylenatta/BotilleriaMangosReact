@@ -2,6 +2,7 @@ import NavItem from '@/components/molecules/NavItem'
 import NavDropdown from './NavDropdown'
 import IconText from '@/components/molecules/IconText'
 import { spacing, color, shadows } from '../protons'
+import Link from '../atoms/Link'
 
 const Navbar = () => {
   return (
@@ -26,9 +27,12 @@ const Navbar = () => {
       >
         {/*- Logo */}
         <div style={{ flex: 1 }}>
-          <IconText icon="mango" textWeight="bold">
-            Mangos
-          </IconText>
+          <Link href={"#"}>
+            <IconText icon="Mango" textWeight="bold">
+              Mangos
+            </IconText>
+          </Link>
+          
         </div>
 
         {/*Navegacion */}

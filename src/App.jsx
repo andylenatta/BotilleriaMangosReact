@@ -1,42 +1,24 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import Carousel from '@/components/organisms/Carousel'
+import { Slide } from '@/assets/img'
+import Navbar from './components/organisms/Navbar'
+import { Mango } from './assets/Icons'
 
-import Card from './components/organisms/Card'
-import {CardHeader, CardContent, CardFooter, CardMedia} from '@/components/molecules/Card'
-import Button from './components/atoms/Button'
-import Text from './components/atoms/Text'
-import {imagen1} from '@/assets/img'
+const slides = [
+  { id: 1, src: Slide.imagen2, alt: 'Promo 1' },
+  { id: 2, src: Slide.imagen3, alt: 'Promo 2' },
+  { id: 3, src: Slide.imagen4, alt: 'Promo 3' },
+]
 
-
-function App() {
-  return (
-    <>
-      <Card clickable onClick={() => console.log('click')}>
-        <CardMedia
-          src={imagen1}
-        >
-
-        </CardMedia>
-        <CardHeader
-          title="Whisky Honey"
-          subtitle="750 ml"
-        />
-
-        <CardContent>
-          <Text size="sm" color="secondary">
-            Whisky añejado 12 años en barrica de roble.
-          </Text>
-        </CardContent>
-
-        <CardFooter>
-          <Button>Comprar</Button>
-        </CardFooter>
-      </Card>
-    </>
-  )
-}
-
+const App = () => (
+  <div style={{ maxWidth: 1200, margin: '0 auto', padding: 20 }}>
+    <Navbar />
+    <Carousel
+      items={slides}
+      height={360}
+      showControls={true}
+      showIndicators={true}
+    />
+  </div>
+)
 
 export default App
