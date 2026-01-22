@@ -26,6 +26,7 @@ function Button({
   variant = "primary",
   size = "md",
   onClick,
+  color,
   disabled = false,
 }) {
   return (
